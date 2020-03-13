@@ -3,7 +3,12 @@ String data;
 
 void setup ()
 {
-pinMode(9, OUTPUT);
+pinMode(4, OUTPUT);
+pinMode(5, OUTPUT);
+pinMode(6, OUTPUT);
+pinMode(7, OUTPUT);
+
+
 Serial.begin (115200);
 }
 
@@ -20,7 +25,7 @@ if(Serial.available()){
  
 if (relay_status=="on")
 {
-digitalWrite(9,HIGH);
+digitalWrite(4,HIGH);
 Serial.println();
 Serial.println("Target is Turned ON ");
 Serial.println();
@@ -28,7 +33,7 @@ Serial.println();
 
 else if (relay_status=="off")
 {
-digitalWrite(9,LOW);
+digitalWrite(4,LOW);
 Serial.println();
 Serial.println("Target is Turned OFF ");
 Serial.println();
