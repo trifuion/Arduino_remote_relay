@@ -26,6 +26,7 @@ if(Serial.available()){
 if (relay_status=="on")
 {
 digitalWrite(4,HIGH);
+digitalWrite(5,HIGH);
 Serial.println();
 Serial.println("Target is Turned ON ");
 Serial.println();
@@ -34,6 +35,7 @@ Serial.println();
 else if (relay_status=="off")
 {
 digitalWrite(4,LOW);
+digitalWrite(5,LOW);
 Serial.println();
 Serial.println("Target is Turned OFF ");
 Serial.println();
